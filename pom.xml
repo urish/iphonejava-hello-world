@@ -20,7 +20,7 @@
 	<artifactId>iphonejava-hello-world</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>iPhoneJava Hello World Sampple Application</name>
+	<name>iPhoneJava Hello World Sample Application</name>
 
 	<properties>
 		<!-- Change the following 2 properties for your project -->
