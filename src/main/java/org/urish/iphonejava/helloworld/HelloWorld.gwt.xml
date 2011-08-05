@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.0.3//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.0.3/distro-source/core/src/gwt-module.dtd">
+
+<module rename-to="HelloWorld">
+    <inherits name="org.urish.gwtit.GwtTitanium" />
+    
+	<entry-point class="org.urish.iphonejava.helloworld.client.HelloWorldModule" />
+	
+	<source path="client" />
+</module>
