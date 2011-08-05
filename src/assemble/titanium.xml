@@ -19,7 +19,7 @@
 		<!-- Create an empty build/iphone directory, working around a bug in titanium 1.7.x -->
 		<fileSet>
 			<directory>${basedir}/src/main/resources</directory>
-			<outputDirectory>/Resources/build/iphone</outputDirectory>
+			<outputDirectory>/build/iphone</outputDirectory>
 			<excludes>
 				<exclude>**/*</exclude>
 			</excludes>

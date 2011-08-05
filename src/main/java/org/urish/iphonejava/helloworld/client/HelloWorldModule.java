@@ -55,8 +55,12 @@ public class HelloWorldModule extends GwtTitaniumBootstrap {
 	
 	private Window createHelloWorldTab() {
 		Window result = UI.createWindow();
+		result.setTitle("Home");
+
 		Button helloWorld = UI.createButton();
 		helloWorld.setTitle("Hello World");
+		helloWorld.setHeight(50);
+		helloWorld.setWidth(200);
 		helloWorld.addClickHandler(new EventCallback<ClickEvent>() {
 			
 			@Override
@@ -75,12 +79,24 @@ public class HelloWorldModule extends GwtTitaniumBootstrap {
 	
 	private Window createAboutTab() {
 		Window result = UI.createWindow();
-		Label helloWorld = UI.createLabel();
-		helloWorld.setText("Hello World Java Application");
-		helloWorld.setTop(60);
-		helloWorld.setTextAlign(UI.TEXT_ALIGNMENT_CENTER);
-		helloWorld.setFont(Font.createFont(32));
-		result.add(helloWorld);
+		result.setTitle("About");
+		result.setBackgroundColor("#FFF");
+
+		Label titleLabel = UI.createLabel();
+		titleLabel.setText("Hello World");
+		titleLabel.setTextAlign(UI.TEXT_ALIGNMENT_CENTER);
+		titleLabel.setFont(Font.createFont(32));
+		titleLabel.setTop(160);
+		titleLabel.setHeight(40);
+		result.add(titleLabel);
+		
+		Label copyrightLabel = UI.createLabel();
+		copyrightLabel.setText("iPhone Java Sample Application. Copyright (c) 2011, Uri Shaked.");
+		copyrightLabel.setTop(220);
+		copyrightLabel.setHeight(42);
+		copyrightLabel.setTextAlign(UI.TEXT_ALIGNMENT_CENTER);
+		result.add(copyrightLabel);
+		
 		return result;
 	}
 }
