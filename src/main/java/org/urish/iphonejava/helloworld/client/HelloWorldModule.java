@@ -40,11 +40,13 @@ public class HelloWorldModule extends GwtTitaniumBootstrap {
 
 		Tab tab1 = UI.createTab();
 		tab1.setTitle("Hello World");
+		tab1.setIcon("tab_home.png");
 		tab1.setWindow(createHelloWorldTab());
 		tabGroup.addTab(tab1);
 
 		Tab tab2 = UI.createTab();
 		tab2.setTitle("About");
+		tab2.setIcon("tab_about.png");
 		tab2.setWindow(createAboutTab());
 		tabGroup.addTab(tab2);
 
