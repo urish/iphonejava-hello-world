@@ -15,7 +15,6 @@
  */
 package org.urish.iphonejava.helloworld.client;
 
-import org.urish.gwtit.client.EventCallback;
 import org.urish.gwtit.client.GwtTitaniumBootstrap;
 import org.urish.gwtit.client.font.Font;
 import org.urish.gwtit.titanium.API;
@@ -25,16 +24,17 @@ import org.urish.gwtit.titanium.ui.Button;
 import org.urish.gwtit.titanium.ui.Label;
 import org.urish.gwtit.titanium.ui.Tab;
 import org.urish.gwtit.titanium.ui.TabGroup;
-import org.urish.gwtit.titanium.ui.View.ClickEvent;
 import org.urish.gwtit.titanium.ui.Window;
+import org.urish.gwtit.titanium.ui.events.ClickEvent;
+import org.urish.gwtit.titanium.ui.events.ClickHandler;
 
 public class HelloWorldModule extends GwtTitaniumBootstrap {
 	public static TabGroup tabGroup;
-	
+
 	@Override
 	public void main() {
 		API.info("Creating UI...");
-		
+
 		tabGroup = UI.createTabGroup();
 		tabGroup.setBarColor("#006800");
 
@@ -54,7 +54,7 @@ public class HelloWorldModule extends GwtTitaniumBootstrap {
 
 		API.info("UI created, application ready!");
 	}
-	
+
 	private Window createHelloWorldTab() {
 		Window result = UI.createWindow();
 		result.setTitle("Home");
@@ -63,22 +63,21 @@ public class HelloWorldModule extends GwtTitaniumBootstrap {
 		helloWorld.setTitle("Hello World");
 		helloWorld.setHeight(50);
 		helloWorld.setWidth(200);
-		helloWorld.addClickHandler(new EventCallback<ClickEvent>() {
-			
+		helloWorld.addClickHandler(new ClickHandler() {
 			@Override
-			public void onEvent(ClickEvent event) {
+			public void onClick(ClickEvent event) {
 				API.info("Hello world clicked !");
-		        AlertDialog alertDialog = UI.createAlertDialog();
-		        alertDialog.setTitle("Example");
-		        alertDialog.setMessage("Hello, World");
-		        alertDialog.show();
+				AlertDialog alertDialog = UI.createAlertDialog();
+				alertDialog.setTitle("Example");
+				alertDialog.setMessage("Hello, World");
+				alertDialog.show();
 			}
 		});
 		result.add(helloWorld);
-		
+
 		return result;
 	}
-	
+
 	private Window createAboutTab() {
 		Window result = UI.createWindow();
 		result.setTitle("About");
@@ -91,14 +90,14 @@ public class HelloWorldModule extends GwtTitaniumBootstrap {
 		titleLabel.setTop(160);
 		titleLabel.setHeight(40);
 		result.add(titleLabel);
-		
+
 		Label copyrightLabel = UI.createLabel();
 		copyrightLabel.setText("iPhone Java Sample Application. Copyright (c) 2011, Uri Shaked.");
 		copyrightLabel.setTop(220);
 		copyrightLabel.setHeight(42);
 		copyrightLabel.setTextAlign(UI.TEXT_ALIGNMENT_CENTER);
 		result.add(copyrightLabel);
-		
+
 		return result;
 	}
 }
