@@ -164,7 +164,7 @@
 		<dependency>
 			<groupId>org.urish.gwt-titanium</groupId>
 			<artifactId>gwt-titanium</artifactId>
-			<version>0.2.0-SNAPSHOT</version>
+			<version>0.2.0</version>
 		</dependency>
 	</dependencies>
 </project>
