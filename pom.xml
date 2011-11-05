@@ -28,7 +28,7 @@
 		<iphonejava.module>HelloWorld</iphonejava.module>
 		
 		<gwt.version>2.3.0</gwt.version>
-		<titanium.sdk.version>1.7.2</titanium.sdk.version>
+		<titanium.sdk.version>1.7.5</titanium.sdk.version>
 		<titanium.platform>iphone</titanium.platform>
 	</properties>
 
@@ -164,7 +164,7 @@
 		<dependency>
 			<groupId>org.urish.gwt-titanium</groupId>
 			<artifactId>gwt-titanium</artifactId>
-			<version>0.2.0-SNAPSHOT</version>
+			<version>0.2.1</version>
 		</dependency>
 	</dependencies>
 </project>
